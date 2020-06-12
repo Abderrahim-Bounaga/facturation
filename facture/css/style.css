@@ -19,11 +19,40 @@
 	height: 100%;
 }
 
+
+
+
 body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 } */
+
+
+/*buttion imprimer*/
+
+#printBox{
+margin-top: 40px;
+ right: 22vw;
+ position: absolute;
+}
+.Printbutton{
+	border-radius:5px;
+    right: 148px;
+
+  color:#fff;
+  cursor:pointer;
+  background-color:#3e87ec;
+  padding:20px;
+transition: all 0.2s;
+}
+
+.Printbutton:hover{
+
+  background-color:#3571c8;
+
+}
+
 
 .register-img {
 	margin: auto;
