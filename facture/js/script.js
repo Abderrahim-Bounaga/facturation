@@ -168,6 +168,7 @@ function onContentLoad() {
 	var
 	input = document.querySelector('input'),
 	image = document.querySelector('img');
+	var maxadd=0;
 
 	function onClick(e) {
 		var element = e.target.querySelector('[contenteditable]'), row;
@@ -175,12 +176,19 @@ function onContentLoad() {
 		element && e.target != document.documentElement && e.target != document.body && element.focus();
 
 		if (e.target.matchesSelector('.add')) {
+			if(maxadd<12){
+
 			document.querySelector('table.inventory tbody').appendChild(generateTableRow());
+			maxadd++;}
+			else{
+
+			}
 		}
 		else if (e.target.className == 'cut') {
 			row = e.target.ancestorQuerySelector('tr');
 
 			row.parentNode.removeChild(row);
+			maxadd--;
 		}
 
 		updateInvoice();
