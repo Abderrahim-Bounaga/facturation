@@ -67,6 +67,7 @@ transition: all 0.2s;
 .register-img {
 	margin: auto;
 	display: flex;
+	
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -75,11 +76,12 @@ transition: all 0.2s;
 	height: 100px;
 	background: #eee;
 	overflow: hidden;
-	&::after {
-		// content: 'Add a preview image';
-		text-align: center;
-		pointer-events: none;
-	}
+	
+}
+.register-img::after {
+	/* content: 'Add a preview image'; */
+	text-align: center;
+	pointer-events: none;
 }
 
 input,
@@ -89,6 +91,7 @@ img {
 	top: 0;
 	bottom: 0;
 	right: 0;
+	cursor: pointer;
 }
 
 input {
@@ -102,9 +105,11 @@ img {
 	height: 100%;
 	transition: opacity .25s ease-in-out;
 	opacity: 1;
-	&[src=''] {
-		opacity: 0;
-	}
+
+	
+}
+img [src=''] {
+	opacity: 0;
 }
 
 /* content editable */
