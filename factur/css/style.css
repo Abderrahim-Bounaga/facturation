@@ -117,22 +117,13 @@ padding:20px;
 transition: all 0.2s;
 }
   
-.Printbutton, #clicMe :hover{
+.Printbutton:hover{
 background-color:#3571c8;
   
 }
-#clicMe{
-border-radius:5px;    
-color:#fff;
-cursor:pointer;
-background-color:#3e87ec;
-padding:10px;
-transition: all 0.2s;
-border: 0px #fff;
-}
   
 @media print {
-#printBox, #convirt{
+#printBox{
   display: none;
 }
       
