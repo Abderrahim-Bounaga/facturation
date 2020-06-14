@@ -7,7 +7,7 @@ document.querySelector('input').addEventListener('change', e => {
 
 function myFunction() {
     var today = new Date();
-var time = today.getSeconds()+today.getMinutes()  + "" +today.getDay() + "/" + today.getMonth() + "/" + today.getFullYear();
+var time = today.getSeconds()+today.getMinutes()  +today.getDay() + "/" + today.getMonth() + "/" + today.getFullYear();
     document.getElementById("demo").innerHTML ="Facture N°"+ "" + time;
   }
   $(document).ready(function () {
@@ -61,17 +61,18 @@ function calc_total() {
     tax_sum = subTotal / 100 * $('#tax').val();
     $('#tax_amount').val(tax_sum.toFixed(2));
     $('#total_amount').val((subTotal+ tax_sum).toFixed(2));
+
+   convert(event)
 }
 // === convert number === //
-(function (window, document) {
-    document.getElementById('clicMe').addEventListener('click', function (event) {
+function convert(event) {
       event.preventDefault();
       var enny = document.getElementById('total_amount').value;
       // var virgule = Math.round(enny);
-      document.getElementById('result').innerHTML = convertNumbersToWords(Math.round(enny))+ " " + "HD";
+      document.getElementById('result').innerHTML = convertNumbersToWords(Math.round(enny))+ " " + "MAD";
       
   
-    }, false);
+    };
   
     function convertNumbersToWords(number) {
       var language = {
@@ -140,7 +141,7 @@ function calc_total() {
   
       return words.reverse().join(' ');
     };
-  })(window, document);
+ 
   
   // function figure(val) {
   //   finalFig = convertNumbersToWords(val);
